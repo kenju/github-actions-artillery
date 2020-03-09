@@ -9,8 +9,4 @@ jobs:
       id: load-test
       uses: kenju/github-actions-artillery@master
       with:
-        target: https://kenju.netlify.com
-        duration: 30
-        arrivalRate: 2
-    - name: Get the output
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        filepath: .github/workflows/fixture/load-test.yml

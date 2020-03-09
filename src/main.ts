@@ -1,20 +1,22 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const artillery = require('artillery');
+const { promises: fs } = require('fs')
 
 async function run() {
   try {
-    const target = core.getInput('target');
-    core.debug(`target=${target}`);
+    const filepath = core.getInput('filepath');
+    core.debug(`filepath=${filepath}`);
 
-    const duration = core.getInput('duration');
-    core.debug(`duration=${duration}`);
+    const content = await fs.readFile(filepath, 'utf8')
+    core.debug('content=')
+    core.debug(content)
 
-    const arrivalRate = core.getInput('arrivalRate');
-    core.debug(`arrivalRate=${arrivalRate}`);
-
-    // Get github context data
     const context = github.context;
-    console.log(`We can even get context data, like the repo: ${context.repo.repo}`)
+    core.debug('context=')
+    core.debug(context)
+
+    artillery.run(filepath, {})
   } catch (error) {
     core.setFailed(error.message);
   }

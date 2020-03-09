@@ -1,0 +1,11 @@
+config:
+  target: https://kenju.netlify.com
+  phases:
+    - duration: 30 #sec
+      arrivalRate: 2
+
+scenarios:
+  - name: load test
+    flow:
+      - get:
+          url: /

@@ -6,21 +6,14 @@ name: github-actions-artillery
 author: kenju
 description: Load test your application with artillery/artillery
 inputs:
-  target:
+  filepath:
     required: true
-  duration:
-    required: false
-    default: 10 #sec
-  arrivalRate:
-    required: false
-    default: 1
+    default: ./load-test.yml
 runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.target }}
-    - ${{ inputs.duration }}
-    - ${{ inputs.arrivalRate }}
+    - ${{ inputs.filepath }}
 branding: # Feather (https://feathericons.com/) icon
   icon: zap
   color: orange
