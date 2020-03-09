@@ -9,4 +9,4 @@ jobs:
       id: load-test
       uses: kenju/github-actions-artillery@master
       with:
-        filepath: .github/workflows/fixture/load-test.yml
+        filepath: load-test.yml
