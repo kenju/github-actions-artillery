@@ -35,6 +35,8 @@ Summary report @ 14:57:11(+0000) 2020-03-09
 
 ### Example
 
+You can find the complete sample at https://github.com/kenju/github-actions-artillery-sample
+
 #### Github Workflow file
 
 ```yaml
