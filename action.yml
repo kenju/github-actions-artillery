@@ -1,7 +1,10 @@
+# GitHub Actions metadata file
+#
 # @doc https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
+#
 name: github-actions-artillery
-description: Get started with Container actions
 author: kenju
+description: Load test your application with artillery/artillery
 inputs:
   target:
     required: true
@@ -18,7 +21,6 @@ runs:
     - ${{ inputs.target }}
     - ${{ inputs.duration }}
     - ${{ inputs.arrivalRate }}
-# Feather (https://feathericons.com/) icon
-branding:
+branding: # Feather (https://feathericons.com/) icon
   icon: zap
   color: orange
