@@ -5,7 +5,6 @@ author: kenju
 inputs:
   target:
     required: true
-    default: https://kenju.netlify.com/
   duration:
     required: false
     default: 10 #sec
