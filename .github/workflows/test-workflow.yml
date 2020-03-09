@@ -7,9 +7,10 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: kenju/github-actions-artillery
+      uses: kenju/github-actions-artillery@master
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
+        target: https://kenju.netlify.com
+        duration: 10
+        arrivalRate: 1
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
