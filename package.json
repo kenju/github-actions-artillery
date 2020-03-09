@@ -4,9 +4,7 @@
   "description": "Container template action using actions/toolkit",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
-    "format": "prettier --write **/*.ts",
-    "test": "jest"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -14,9 +12,7 @@
   },
   "keywords": [
     "actions",
-    "container",
-    "toolkit",
-    "setup"
+    "container"
   ],
   "author": "GitHub",
   "license": "ISC",
@@ -32,12 +28,7 @@
     "@actions/tool-cache": "^1.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.13",
     "@types/node": "^12.0.4",
-    "jest": "^24.8.0",
-    "jest-circus": "^24.7.1",
-    "prettier": "^1.17.1",
-    "ts-jest": "^24.0.2",
     "typescript": "^3.5.1"
   }
 }
