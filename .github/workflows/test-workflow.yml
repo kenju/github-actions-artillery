@@ -6,7 +6,6 @@ jobs:
     name: A load test sample job
     steps:
     - uses: actions/checkout@master
-    - run: ls -la $GITHUB_WORKSPACE
     - name: Load Test action step
       id: load-test
       uses: kenju/github-actions-artillery@master
