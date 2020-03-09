@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     name: A load test sample job
     steps:
-    - name: Hello world action step
-      id: hello
+    - name: Load Test action step
+      id: load-test
       uses: kenju/github-actions-artillery@master
       with:
         target: https://kenju.netlify.com
         duration: 10
         arrivalRate: 1
-    - name: Get the output time
+    - name: Get the output
       run: echo "The time was ${{ steps.hello.outputs.time }}"
