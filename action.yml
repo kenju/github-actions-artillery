@@ -1,10 +1,21 @@
-name: 'github-actions-artillery'
-description: 'Get started with Container actions'
-author: 'GitHub'
+# @doc https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
+name: github-actions-artillery
+description: Get started with Container actions
+author: kenju
 inputs:
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  target:
+    required: true
+    default: https://kenju.netlify.com/
+  duration:
+    required: false
+    default: 10 #sec
+  arrivalRate:
+    required: false
+    default: 1
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
+# Feather (https://feathericons.com/) icon
+branding:
+  icon: zap
+  color: orange
