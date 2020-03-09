@@ -8,9 +8,10 @@ async function run() {
     const filepath = core.getInput('filepath');
     core.debug(`filepath=${filepath}`);
 
+    core.debug(`GITHUB_WORKSPACE=${process.env.GITHUB_WORKSPACE}`)
+
     const context = github.context;
-    core.debug('context=')
-    core.debug(context)
+    core.debug(`repo=${context.repo}`)
 
     const content = await fs.readFile(filepath, 'utf8')
     core.debug('content=')
