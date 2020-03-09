@@ -8,13 +8,13 @@ async function run() {
     const filepath = core.getInput('filepath');
     core.debug(`filepath=${filepath}`);
 
-    const content = await fs.readFile(filepath, 'utf8')
-    core.debug('content=')
-    core.debug(content)
-
     const context = github.context;
     core.debug('context=')
     core.debug(context)
+
+    const content = await fs.readFile(filepath, 'utf8')
+    core.debug('content=')
+    core.debug(content)
 
     artillery.run(filepath, {})
   } catch (error) {
